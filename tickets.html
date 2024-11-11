@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Häppchen SAG - Partner</title>
+  <meta content="Ein gutes Häppchen in Ehren kann keiner verwehren." name="description">
+  <meta content="Schülerfirma" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/apple-touch-icon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-left: 50px;
+  }
+  
+  .rounded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .container2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .ticket-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .ticket-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .ticket-id {
+    font-size: 18px;
+    color: orange;
+  }
+  
+  .ticket-title {
+    font-size: 18px;
+    color: black;
+  }
+  
+  .ticket-info {
+    font-size: 14px;
+  }
+  
+  .status-badge {
+    font-size: 12px;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+  
+  .status-badge[data-status="Offen"] {
+    background-color: green;
+  }
+  
+  .status-badge[data-status="Warte auf Support"],
+  .status-badge[data-status="Warte auf User"] {
+    background-color: orange;
+  }
+  
+  .status-badge[data-status="Geschlossen"] {
+    background-color: gray;
+  }
+  
+  .team-badge {
+    font-size: 12px;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    background-color: #007bff;
+  }
+  
+  .ticket-item {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .ticket-list {
+    max-height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* Stile für das Scrollen ab 7 offenen Tickets */
+  @media (min-height: 700px) {
+    .ticket-list {
+      max-height: 600px;
+    }
+  }
+  
+  /* Hinzugefügte Stile für das Letztes Update */
+  .ticket-info-container {
+    text-align: left;
+  }
+
+  .ticket-letztes_update {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+</style>
+  
+  
+
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="https://häppchen-sag.de" class="logo d-flex align-items-center">
+        <h1>Häppchen SAG<span>.</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="https://häppchen-sag.de">Hauptseite</a></li>
+          <li><a href="https://häppchen-sag.de/über">Über uns</a></li>
+          <li><a href="https://häppchen-sag.de/partner">Partner</a></li>
+          <li><a href="https://häppchen-sag.de/blogs">Blog</a></li>
+          <li><a href="https://häppchen-sag.de/kontakt" class="active" >Kontakt</a></li>
+        </ul>
+
+        <div class="image-container">
+          <img src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331256_1280.png" alt="User Avatar" class="rounded-image">
+        </div></li>
+        <li class="dropdown"><a href="#"><span>{{ username }}</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="https://häppchen-sag.de">Ausloggen</a></li>
+          </ul>
+        </li>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Willkommen im Support der <span>Häppchen SAG</span></h2>
+        <div class="h5" style="color: #f9f9f9;">
+          <h5>Hier kannst du Kontakt zu uns aufnehmen um Fragen zu stellen und Aufträge zu erfragen.</h5>
+        </div>
+        <ol>
+          <li><a href="https://häppchen-sag.de">Hauptseite</a></li>
+          <li>Ticketsystem</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+  <main id="main">
+    <section class="inner-page">
+    <div class="container">
+      <title>Ticket-Übersicht</title>
+      <div class="container2">
+        <h1>Aktuelle Supporttickets</h1>
+        <div class="box">
+          <div class="box-header">
+            <div class="new-ticket">
+              <form action="/new_ticket" method="post">
+                <input type="hidden" name="username" value="{{ username }}">
+                <input type="text" name="titel" placeholder="Thema des Tickets" maxlength="20">
+                <button type="submit">Eröffnen</button>
+              </form>              
+            </div>
+          </div>
+          <div class="ticket-list">
+            {% if all_tickets %}
+              {% for ticket_id, ticket_info in all_tickets.items() %}
+                {% if ticket_info %}
+                  <form action="/open_ticket" method="post" class="ticket-form">
+                    <button type="submit" name="ticketID" value="{{ ticket_info.ticketID }}" class="ticket-box">
+                      <div class="ticket-header">
+                        <span class="ticket-id">#{{ ticket_info.ticketID }}</span>
+                        <span class="ticket-title">{{ ticket_info.titel }}</span>
+                      </div>
+                      <div class="ticket-info-container">
+                        <span class="ticket-letztes_update" style="color: black">Letztes Update: {{ ticket_info.letztes_update }}</span>
+                      </div>
+                      <div class="ticket-footer">
+                        <span class="status-badge" data-status="{{ ticket_info.status }}">{{ ticket_info.status }}</span>
+                        {% if ticket_info.team == 'ja' %}
+                          <span class="team-badge">{{ ticket_info.username }}</span>
+                        {% endif %}
+                      </div>
+                    </button>
+                    <input type="hidden" name="username" value="{{ username }}">
+                    <input type="hidden" name="thema" value="{{ ticket_info.titel }}">
+                    <input type="hidden" name="ticketID" value="{{ ticketID }}">
+                    <input type="hidden" name="status" value="{{ ticket_info.status }}">
+                  </form>
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              <br>
+              <div class="ticket-item">Keine Tickets</div>
+            {% endif %}
+          </div>                     
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Häppchen SAG</h3>
+              <p>
+                Mauerstraße 13 <br>
+                Osterwieck 38835, Deutschland<br><br>
+                
+                
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Rechtliches</h4>
+            <ul>
+              <li><a href="https://häppchen-sag.de/impressum">Impressum</a></li>
+              
+            </ul>
+          </div><!-- End footer links column-->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Häppchen SAG</span></strong>.
+        </div>
+        <div class="credits">
+          Designt von <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
